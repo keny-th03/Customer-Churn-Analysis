@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2f7;
+            padding: 40px;
+            text-align: center;
+        }
+        .result {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .churn {
+            color: #d32f2f;
+        }
+        .stay {
+            color: #2e7d32;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1976d2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result">
+    <h2>📊 Customer Churn Prediction</h2>
+
+    {% if prediction == "Customer Will Churn" %}
+        <h1 class="churn">⚠ {{ prediction }}</h1>
+    {% else %}
+        <h1 class="stay">✅ {{ prediction }}</h1>
+    {% endif %}
+
+    <h3>Churn Probability: {{ probability }}%</h3>
+
+    <a href="/visuals">📈 View Model Visualizations</a>
+    <a href="/">🔙 Predict Another Customer</a>
+</div>
+
+</body>
+</html>

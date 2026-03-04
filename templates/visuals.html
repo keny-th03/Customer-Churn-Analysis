@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Churn Visualizations</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #1976d2;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-btn:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>📊 Customer Churn Model & Data Visualizations</h2>
+
+    <img src="{{ url_for('static', filename='Churn_by_Gender.png') }}">
+    <img src="{{ url_for('static', filename='Tenure_Distribution_vs_Churn.png') }}">
+    <img src="{{ url_for('static', filename='Contract_Type_&_Payment_Method.png') }}">
+    <img src="{{ url_for('static', filename='Tenure_and_Monthly_Charges.png') }}">
+    <img src="{{ url_for('static', filename='ROC_Curve-Tuned_Random_Forest.png') }}">
+    <img src="{{ url_for('static', filename='Logistic_Regression_Feature_Importance.png') }}">
+    <img src="{{ url_for('static', filename='Random_Forest_Feature_Importance.png') }}">
+
+
+    <button class="back-btn" onclick="history.back()">⬅ Back to Prediction Result</button>
+
+</body>
+
+</html>
